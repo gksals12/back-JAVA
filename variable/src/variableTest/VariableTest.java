@@ -15,7 +15,7 @@ public class VariableTest {
 		long num4 = 20L;
 		char ch = 'c';
 //		클래스형 자료형
-		String str= "str";
+		String str= "";
 		
 	}
 }
