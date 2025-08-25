@@ -44,7 +44,7 @@ class Market{
 			}
 			System.out.printf(tempMsg, customer.name, product, discount, customer.currency, stock);
 		}else {
-			// 충분한 돈이 없으니 잔고가 부족하고 출력
+			// 충분한 돈이 없으니 잔고가 부족하고 출력	
 			System.out.println("돈이 부족합니다");
 		}
 	}
@@ -77,7 +77,7 @@ public class ClassTask02 {
 //		마켓의 상품 재고와, 소비자의 남은 금액을 출력
 		
 //		Market 객체
-		Market tv = new Market("tv", 1_000_000, 10);
+		Market tv = new Market("tv", 1_000_000, 10); 
 		Market radio = new Market("radio", 100_000, 5);
 		Market car = new Market("car", 9_000_000, 90);
 		Market book = new Market("book", 20_000, 42);
