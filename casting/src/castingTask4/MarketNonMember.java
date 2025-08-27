@@ -8,6 +8,9 @@ public class MarketNonMember extends Customers{
 	public MarketNonMember(String name, String phone, double money) {
 		super(name, phone, money);
 	}
+	public MarketNonMember(String name, String phone, double money, int coupon) {
+		super(name, phone, money, coupon);
+	}
 	
 @Override
 	public double discount() {

@@ -43,8 +43,9 @@ public class CastingTask4 {
 		Market market1 = new Market("슈퍼");
 		Product product1 = new Product("사과", 9000.0, 4);
 		Product product2 = new Product("바나나", 9000.5, 5);
-		MarketMember marketmember1 = new MarketMember("홍길동", "01000000000", 10000.0);
-		MarketNonMember marketmember2 = new MarketNonMember("장보고", "01000000000", 10000.0);
+		MarketMember marketMember1 = new MarketMember("홍길동", "01000000000", 10000.0);
+		MarketNonMember marketNonMember1 = new MarketNonMember("장보고", "01000000000", 10000.0);
+		MarketNonMember marketNonMember2 = new MarketNonMember("김철수", "01011111111", 20000.0, 10);
 		
 		String marketMsg1 = "", marketMsg2 = "";
 		
@@ -54,11 +55,13 @@ public class CastingTask4 {
 		market1.addProduct(product1);
 		market1.addProduct(product2);
 		
-		market1.sellProduct(product1, marketmember1);
-		market1.sellProduct(product1, marketmember2);
+		market1.sellProduct(product1, marketMember1);
+		market1.sellProduct(product1, marketNonMember1);
 		
-		market1.savePoint(product1, marketmember1);
-		market1.savePoint(product1, marketmember1);
-		market1.savePoint(product1, marketmember1);
+		market1.savePoint(product1, marketMember1);
+		market1.savePoint(product1, marketMember1);
+		market1.savePoint(product1, marketMember1);
+		
+		market1.saveCoupon(product1, marketNonMember2);
 	}
 }

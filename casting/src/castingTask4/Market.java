@@ -1,5 +1,7 @@
 package castingTask4;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 //- 필드: 이름
 //- 메서드:
 // 1. 상품 판매
@@ -77,8 +79,19 @@ public class Market {
 		System.out.println(customers.getPoint() + "적립 포인트");
 	}
 	
-	public void saveCoupon() {
+	public void saveCoupon(Product product, MarketNonMember marketNonMember) {
 		// 쿠폰 1장 제공, 쿠폰이 10장이라면 상품 무료!
+		if(marketNonMember.getCoupon() < 10) {
+			marketNonMember.setCoupon(marketNonMember.getCoupon() + 1);
+		}
+	}
+	
+	public void useCoupon(Product product, MarketNonMember marketNonMember) {
+		if(marketNonMember.getCoupon() == 10) {
+			marketNonMember.setCoupon(marketNonMember.getCoupon() - 10);
+			product.setPrice((int)product.getPrice() * 0);
+			System.out.println("공짜결제!");
+		}
 	}
 	
 	public String getMarketName() {
