@@ -7,10 +7,6 @@ package castingTask;
 
 
 public class CastingTask1 {
-	
-	
-	
-	
 	public static void main(String[] args) {
 		new Pororo().play(new Crong());
 		new Pororo().play(new Loopy());
