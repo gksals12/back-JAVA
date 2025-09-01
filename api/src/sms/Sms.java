@@ -18,7 +18,7 @@ public class Sms {
 	      params.put("to", "");
 	      params.put("from", "");
 	      params.put("type", "SMS");
-	      params.put("text", "김정수씨 안녕하세요?*^^*");
+	      params.put("text", "");
 	      params.put("app_version", "text app 1.2"); // application name and version
 
 	      try {
