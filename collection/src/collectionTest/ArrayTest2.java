@@ -1,4 +1,4 @@
-package collection;
+package collectionTest;
 
 import java.util.ArrayList;
 
@@ -44,7 +44,7 @@ public class ArrayTest2 {
 				prve = datas.set(datas.indexOf(90), 9);
 			}
 			if(datas.contains(80)) {
-				datas.remove(6);
+				datas.remove(Integer.valueOf(80));
 			}
 		}catch(IndexOutOfBoundsException e) {
 			System.out.println("ArrayList2 에외발생");
