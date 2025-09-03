@@ -22,7 +22,7 @@ public class MailTest {
 		Random rand = new Random();
 		rand.nextInt(00000000, 99999999);
 		
-		  // 메일 인코딩
+		// 메일 인코딩
         final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
         
         //원하는 메일 제목 작성

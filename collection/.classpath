@@ -6,5 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="C:/back_0900_yhm/java/resource/java_mail_api/activation-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/back_0900_yhm/java/resource/java_mail_api/mail-1.4.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/back_0900_yhm/java/resource/org.json.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
