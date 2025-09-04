@@ -1,50 +1,28 @@
 package streamTest;
 
 import java.util.ArrayList;
-import java.util.stream.IntStream;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class StreamTest {
 	public static void main(String[] args) {
-		ArrayList<Integer> datas = new ArrayList<Integer>();
-//		IntStream : 정수형을 사용해서 stream문법을 사용
-		IntStream.rangeClosed(0, 10).forEach((num) -> {
-			datas.add(num);
-		});
-//		System.out.println(datas);
+//		sorted() : 정렬
+		ArrayList<Integer> numbers = new ArrayList<Integer>(Arrays.asList(1,10,6,4,8));
+//		numbers.stream().sorted().forEach(System.out::println);
+//		numbers.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
 		
-//		1~5까지 stream 문법으로 출력
-		ArrayList<Integer> arrData1 = new ArrayList<Integer>();
-		IntStream.rangeClosed(1,5).forEach((num) -> {
-			arrData1.add(num);
-		});
-//		System.out.println(arrData1);
+//		collect() : 결과를 다양한 타입으로 리턴
+		ArrayList<Integer> numbers2 = new ArrayList<Integer>(Arrays.asList(1,10,6,4,8));
 		
-//		참조형 문법
-//		.(소속::메서드명)
-//		IntStream.rangeClosed(1,5).forEach(System.out::println);
+//		두개는 같은거 형변환 List는 부모 ArrayList는 자식
+		List<Integer> newList = numbers2.stream().map((num) -> num * 10).collect(Collectors.toList());
 		
-//		datas 짝수만 출력하기
-		datas.forEach((num) -> {
-			if(num % 2 == 0) {
-//				System.out.println(num);
-			}
-		});
-
-//		datas 홀수만 출력하기
-		datas.stream().filter((num) -> num % 2 == 1).forEach(System.out::println);
-	
-//		chars()
-		"ABCD".chars().forEach(System.out::print);
-		"ABCD".chars().forEach((c) -> {
-			System.out.println((char)c);
-		});
+		ArrayList<Integer> newArrayList = numbers2.stream().map((num) -> num * 10).collect(Collectors.toCollection(ArrayList::new));
 		
-//		ArrayList<Integer> arrData2 = new ArrayList<Integer>();
-//		IntStream.rangeClosed(0, 10).forEach((num) -> {
-//			if(num % 2 == 0) {
-//				arrData2.add(num);
-//			}
-//		});
-//		System.out.println(arrData2);
+//		문자열로 결과 타입을 변경
+		String newString = numbers2.stream().map((num) -> num * 10).map(String::valueOf).collect(Collectors.joining(","));
+		System.out.println(newString);
 	}
 }
