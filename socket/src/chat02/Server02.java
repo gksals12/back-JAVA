@@ -33,6 +33,7 @@ public class Server02 {
 			while(true) {
 				String inMsg = bufferedReader.readLine();
 				System.out.println("클라이언트가 보낸 메세지: " + inMsg);
+				
 				System.out.println("클라이언트로 메세지 전송: ");
 				String outMsg = sc.nextLine();
 				bufferedWriter.write(outMsg + "\n");
